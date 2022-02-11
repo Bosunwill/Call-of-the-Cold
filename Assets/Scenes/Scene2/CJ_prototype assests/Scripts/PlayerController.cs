@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -32,6 +33,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if(EventSystem.current.IsPointerOverGameObject())
+            return;
+
         //Gets the inputs for movement
         moveInput.x = Input.GetAxis("Horizontal");
         moveInput.y = Input.GetAxis("Vertical");
