@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class playerController : MonoBehaviour
 {
     //This controller uses the Rigidbody system for movement
     public Rigidbody theRB;
@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed;
     public float jumpForce;
+    public bool isCrouched;
 
     private Vector2 moveInput;
 
@@ -62,8 +63,22 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-            return;
+
+        if (Input.GetButtonDown("Crouch"))
+        {
+            Debug.Log("CROUCHING");
+            isCrouched = true;
+            moveSpeed = 0;
+        }
+        else if (Input.GetButtonUp("Crouch"))
+        {
+            isCrouched = false;
+            moveSpeed = 10;
+        }
+
+        // not sure what this code does is this part of the inventory? -CJ
+        /*  if (EventSystem.current.IsPointerOverGameObject())
+              return; */
 
         //Gets the inputs for movement
         moveInput.x = Input.GetAxis("Horizontal");
@@ -77,9 +92,15 @@ public class PlayerController : MonoBehaviour
 
         //Animator controller for movement recieved from the rigidbody
         anim.SetFloat("Speed", theRB.velocity.magnitude);
+        anim.SetBool("isCrouched", isCrouched);
 
+
+        //Control for crouching 
+
+
+        //Commented out to remove jumping but not deleted incase we change our minds
         //Stores information if the raycast hits anything and detects the gorund when jumping
-        RaycastHit hit;
+        /*RaycastHit hit;
         if (Physics.Raycast(groundPoint.position, Vector3.down, out hit, .3f, whatIsGround))
         {
             isGrounded = true;
@@ -94,15 +115,15 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             theRB.velocity += new Vector3(0f, jumpForce, 0f);
-        }
+        } */
 
 
         //This flips the sprite when moving
-        if (!theSR.flipX && moveInput.x < 0)
+        if (!theSR.flipX && moveInput.x > 0)
         {
             theSR.flipX = true;
         }
-        else if (theSR.flipX && moveInput.x > 0)
+        else if (theSR.flipX && moveInput.x < 0)
         {
             theSR.flipX = false;
         }
