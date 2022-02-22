@@ -30,14 +30,14 @@ public class cameraController : MonoBehaviour
     void ViewObstructed()
     {
         RaycastHit hit;
-        Obstruction.gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+        Obstruction.gameObject.GetComponent<SpriteRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
         if (Physics.Raycast(transform.position, target.position - transform.position, out hit, 4.5f))
         {
 
             if (hit.collider.gameObject.tag != "Player")
             {
                 Obstruction = hit.transform;
-                Obstruction.gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+                Obstruction.gameObject.GetComponent<SpriteRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
 
                 if (Vector3.Distance(Obstruction.position, transform.position) >= 3f && Vector3.Distance(transform.position, target.position) >= 1.5f)
                 {
