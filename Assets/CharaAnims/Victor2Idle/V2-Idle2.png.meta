@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c53c512f137b2654ba78a722c01cc64b
+=======
+guid: a00aa3cbf774c944eab96e6f21191842
+>>>>>>> heads/origin/scene2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
