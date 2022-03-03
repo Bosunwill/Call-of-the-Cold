@@ -36,6 +36,9 @@ public class InventorySlot : MonoBehaviour
         if(item != null)
         {
             item.Use();
-        }
+            item = null;
+            icon.enabled = false;
+            icon.sprite = null;
+        }   
     }
 }
