@@ -433,7 +433,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Goal: {fileID: 1889798405}
-  agent: {fileID: 0}
 --- !u!54 &42645696
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -573,10 +572,6 @@ MonoBehaviour:
   - {fileID: 1316035645}
   - {fileID: 588723566}
   Goal: {fileID: 1889798405}
-  destPoint: 0
-  agent: {fileID: 0}
-  minDistance: 10
-  pos: 0
   eye: {fileID: 595676367}
 --- !u!1 &116254644 stripped
 GameObject:
@@ -703,7 +698,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-15654
+  m_Name: pb_Mesh-1546
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -963,7 +958,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-15340
+  m_Name: pb_Mesh18420
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1266,7 +1261,6 @@ MonoBehaviour:
   Player: {fileID: 1889798405}
   rayEmitter: {fileID: 595676366}
   fieldOfView: 60
-  rend: {fileID: 0}
 --- !u!135 &595676368
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1931,7 +1925,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-15442
+  m_Name: pb_Mesh-1334
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3475,7 +3469,7 @@ PrefabInstance:
     - target: {fileID: 7290363717591294352, guid: 6a3a6338b4937e442bedae9b38b54c0a, type: 3}
       propertyPath: theRB
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1998026733}
     - target: {fileID: 7290363717591294353, guid: 6a3a6338b4937e442bedae9b38b54c0a, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3554,13 +3548,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a3a6338b4937e442bedae9b38b54c0a, type: 3}
+--- !u!54 &1998026733 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 4807405005248607185, guid: 6a3a6338b4937e442bedae9b38b54c0a, type: 3}
+  m_PrefabInstance: {fileID: 1998026732}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &2010847612
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37310
+  m_Name: pb_Mesh18474
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
