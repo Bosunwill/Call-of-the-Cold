@@ -164,20 +164,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b983c99071af74c8bfb3d1286559bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theRB: {fileID: 0}
+  theRB: {fileID: 4807405005248607185}
   moveSpeed: 5
   jumpForce: 0
   isCrouched: 0
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   groundPoint: {fileID: 0}
   anim: {fileID: 7290363717024413051}
   theSR: {fileID: 7290363717024413053}
   maxHealth: 100
   currentHealth: 0
-  normalTemp: 32
-  currentTemp: 0
+  normalTemp: -45
+  currentTemp: -48.8
+  tempArrow: {fileID: 0}
 --- !u!23 &2786279179501746184
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -47,7 +47,7 @@ public class cameraController : MonoBehaviour
             }
             else
             {
-                Obstruction.gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+                Obstruction.gameObject.GetComponent<SpriteRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
                 if (Vector3.Distance(transform.position, target.position) < 4.5f)
                 {
                     transform.Translate(Vector3.back * zoomSpeed * Time.deltaTime);
