@@ -36,8 +36,8 @@ public class Patrol : MonoBehaviour
     {
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
         GotoNextPoint();
-        Debug.Log("Distance to Player: " + Vector3.Distance(this.transform.position, 
-        Goal.transform.position));
+        //Debug.Log("Distance to Player: " + Vector3.Distance(this.transform.position, 
+        //Goal.transform.position));
         pos = Vector3.Distance(this.transform.position, Goal.transform.position);
         if(eye.canSeePlayer && pos < minDistance){
             agent.destination = Goal.position;
