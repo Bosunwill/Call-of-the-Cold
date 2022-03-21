@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d5319ccebde24444e955a24bb5333631
+=======
+guid: 06debc508f4c9e544b82a1e9d6f7d7a8
+>>>>>>> scene5
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
