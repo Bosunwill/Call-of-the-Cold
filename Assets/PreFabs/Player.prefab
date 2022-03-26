@@ -177,7 +177,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   normalTemp: 32
-  currentTemp: 0
+  currentTemp: 32
 --- !u!23 &2786279179501746184
 MeshRenderer:
   m_ObjectHideFlags: 0
