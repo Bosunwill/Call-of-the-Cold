@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
 
     public static Inventory instance;
 
+
     void Awake()
     {
         if (instance != null)
@@ -57,4 +58,7 @@ public class Inventory : MonoBehaviour
                 onItemChangedCallback.Invoke();
             }
     }
+
+
+    
 }
