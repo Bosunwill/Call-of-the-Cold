@@ -1835,6 +1835,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &6809650309016685563
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5922954752220534439}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.046977147, y: 0.015220156, z: 0.018585786}
+  m_Center: {x: 0.001127448, y: 0.000497243, z: 0.011497614}
 --- !u!1 &6842065312042204621
 GameObject:
   m_ObjectHideFlags: 0
@@ -3501,7 +3514,7 @@ PrefabInstance:
     - target: {fileID: -1684107799473140416, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Name
       value: MS Big Light (7)
@@ -3509,7 +3522,7 @@ PrefabInstance:
     - target: {fileID: 6317578925029434746, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
 --- !u!4 &6447289190226288891 stripped
@@ -3871,7 +3884,7 @@ PrefabInstance:
     - target: {fileID: -1684107799473140416, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Name
       value: MS Big Light (1)
@@ -3879,7 +3892,7 @@ PrefabInstance:
     - target: {fileID: 6317578925029434746, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
 --- !u!4 &6447289190153075574 stripped
@@ -4989,7 +5002,7 @@ PrefabInstance:
     - target: {fileID: -1684107799473140416, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Name
       value: MS Big Light (10)
@@ -4997,7 +5010,7 @@ PrefabInstance:
     - target: {fileID: 6317578925029434746, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
 --- !u!4 &6447289189655039798 stripped
@@ -5219,7 +5232,7 @@ PrefabInstance:
     - target: {fileID: -1684107799473140416, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Name
       value: MS Big Light (2)
@@ -5227,7 +5240,7 @@ PrefabInstance:
     - target: {fileID: 6317578925029434746, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
 --- !u!4 &6447289189611439021 stripped
@@ -5301,7 +5314,7 @@ PrefabInstance:
     - target: {fileID: -1684107799473140416, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fada5d5553eaee24893e7f5ce2ad30ab, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Name
       value: MS Big Light (11)
@@ -5309,7 +5322,7 @@ PrefabInstance:
     - target: {fileID: 6317578925029434746, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fada5d5553eaee24893e7f5ce2ad30ab, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
 --- !u!4 &6447289189502773420 stripped
@@ -5350,7 +5363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.3
+      value: -777
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5383,7 +5396,7 @@ PrefabInstance:
     - target: {fileID: -1684107799473140416, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fada5d5553eaee24893e7f5ce2ad30ab, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Name
       value: MS Big Light (9)
@@ -5391,9 +5404,14 @@ PrefabInstance:
     - target: {fileID: 6317578925029434746, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fada5d5553eaee24893e7f5ce2ad30ab, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
+--- !u!1 &5922954752220534439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
+  m_PrefabInstance: {fileID: 6842065312722725878}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6447289189500275741 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
@@ -5613,7 +5631,7 @@ PrefabInstance:
     - target: {fileID: -1684107799473140416, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Name
       value: MS Big Light (4)
@@ -5621,7 +5639,7 @@ PrefabInstance:
     - target: {fileID: 6317578925029434746, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
 --- !u!4 &6447289189318726440 stripped
@@ -5695,7 +5713,7 @@ PrefabInstance:
     - target: {fileID: -1684107799473140416, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Name
       value: MS Big Light (6)
@@ -5703,7 +5721,7 @@ PrefabInstance:
     - target: {fileID: 6317578925029434746, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
 --- !u!4 &6447289189275451185 stripped
@@ -5999,7 +6017,7 @@ PrefabInstance:
     - target: {fileID: -1684107799473140416, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Name
       value: MS Big Light
@@ -6007,7 +6025,7 @@ PrefabInstance:
     - target: {fileID: 6317578925029434746, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
 --- !u!4 &6447289189135014633 stripped
@@ -6303,7 +6321,7 @@ PrefabInstance:
     - target: {fileID: -1684107799473140416, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Name
       value: MS Big Light (3)
@@ -6311,7 +6329,7 @@ PrefabInstance:
     - target: {fileID: 6317578925029434746, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
 --- !u!4 &6447289189022721745 stripped
@@ -6977,7 +6995,7 @@ PrefabInstance:
     - target: {fileID: -1684107799473140416, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Name
       value: MS Big Light (5)
@@ -6985,7 +7003,7 @@ PrefabInstance:
     - target: {fileID: 6317578925029434746, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
 --- !u!4 &6447289188547159312 stripped
@@ -7355,7 +7373,7 @@ PrefabInstance:
     - target: {fileID: -1684107799473140416, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Name
       value: MS Big Light (8)
@@ -7363,7 +7381,7 @@ PrefabInstance:
     - target: {fileID: 6317578925029434746, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ee6516477e9c294eaa6935bbbb6ae69, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d760f122a4c9c89419bf4565b819d625, type: 3}
 --- !u!4 &6447289188369697188 stripped
