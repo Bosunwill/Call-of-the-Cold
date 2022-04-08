@@ -74,7 +74,7 @@ public class playerController : MonoBehaviour
         {
             Debug.Log("You got hit");
             currentHealth -= 200 * Time.deltaTime;
-         //   healthBar.SetHealth(currentHealth);
+            //healthBar.SetHealth(currentHealth);
 
         }
     }

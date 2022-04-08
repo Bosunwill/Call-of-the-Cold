@@ -40,6 +40,7 @@ public class Patrol : MonoBehaviour
         Goal.transform.position));
         pos = Vector3.Distance(this.transform.position, Goal.transform.position);
         if(eye.canSeePlayer && pos < minDistance){
+
             agent.destination = Goal.position;
         } else
         {
