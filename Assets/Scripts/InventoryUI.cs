@@ -20,8 +20,9 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Inventory"))
+        if (Input.GetKeyDown(KeyCode.I))
         {
+            Debug.Log("Activating Inv");
             inventoryUI.SetActive(!inventoryUI.activeSelf);
         }
     }
@@ -34,10 +35,10 @@ public class InventoryUI : MonoBehaviour
             {
                 slots[i].AddItem(inventory.items[i]);
             }
-            else
-            {
-                slots[i].ClearSlot();
-            }
+            //else
+            //{
+            //    slots[i].ClearSlot();
+            //}
         }
     }
 }

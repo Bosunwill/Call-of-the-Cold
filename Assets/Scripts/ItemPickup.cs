@@ -6,11 +6,12 @@ public class ItemPickup : MonoBehaviour
 {
 
     public bool canPickup = false;
+    public bool opened = false;
     public Item item;
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && canPickup == true)
+        if(Input.GetKeyDown(KeyCode.E) && canPickup == true && opened == false)
         {
             PickUp();
         }
@@ -23,7 +24,7 @@ public class ItemPickup : MonoBehaviour
 
         if(wasPickedUp)
         {
-            Destroy(this.gameObject);
+            opened = true;
         }
         
     }
