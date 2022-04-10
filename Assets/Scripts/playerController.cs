@@ -14,6 +14,9 @@ public class playerController : MonoBehaviour
     public float jumpForce;
     public bool isCrouched;
 
+    float xtimeScale;
+    float ytimeScale;
+
     private Vector2 moveInput;
 
     // These build a raycast system for jumping
@@ -94,7 +97,7 @@ public class playerController : MonoBehaviour
     {
         currentHealth = maxHealth;
         currentTemp = normalTemp;
-      //  healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     void Update()
@@ -119,8 +122,11 @@ public class playerController : MonoBehaviour
               return; */
 
         //Gets the inputs for movement
-        moveInput.x = Input.GetAxis("Horizontal");
-        moveInput.y = Input.GetAxis("Vertical");
+        moveInput.x = Input.GetAxis("Horizontal") * xtimeScale;
+        moveInput.y = Input.GetAxis("Vertical") * ytimeScale;
+
+        xtimeScale *= Time.deltaTime;
+        ytimeScale *= Time.deltaTime;
 
         //Stops any wierd directional movement speed increases
         moveInput.Normalize();
