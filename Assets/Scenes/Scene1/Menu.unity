@@ -1648,7 +1648,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hoe to Play
+  m_Text: How to Play
 --- !u!222 &895292500
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2687,6 +2687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1453501099}
   - component: {fileID: 1453501100}
+  - component: {fileID: 1453501101}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -2731,6 +2732,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4aa7ed9da43e8046be82e31c7778682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!64 &1453501101
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453501098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &1639731387
 GameObject:
   m_ObjectHideFlags: 0
