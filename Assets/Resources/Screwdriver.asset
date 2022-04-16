@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98117cb6a805ce540bf5db3b5ec754a4, type: 3}
   m_Name: Screwdriver
   m_EditorClassIdentifier: 
-  name: Screwdriver
+  item: {fileID: 11400000}
+  itemName: Screw_driver
   icon: {fileID: 21300000, guid: 30de2ef84ad4ded4da3b2249c4d68380, type: 3}
   permItem: 1
   cas1: {fileID: 0}
   cas2: {fileID: 0}
   cas3: {fileID: 0}
   isDefaultItem: 0
-  audi: {fileID: 0}
-  source: {fileID: 0}
   cassetteTape: 0
   isCassette1: 0
   isCassette2: 0

@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98117cb6a805ce540bf5db3b5ec754a4, type: 3}
   m_Name: Cassette Tape 2
   m_EditorClassIdentifier: 
-  name: Cassette Tape 2
+  item: {fileID: 11400000}
+  itemName: Cassette2
   icon: {fileID: 21300000, guid: be77aa05c99386b4e8f3f6c6293d64aa, type: 3}
   permItem: 1
   cas1: {fileID: 8300000, guid: 54f965fa72d22b042b8992b7f26aa1a3, type: 3}
   cas2: {fileID: 8300000, guid: 854b0ba9ffe4ddb438c2c38aeaf73001, type: 3}
   cas3: {fileID: 8300000, guid: c5b5b20a21a45ea4ea94de7558dac08a, type: 3}
   isDefaultItem: 0
-  audi: {fileID: 0}
-  source: {fileID: 0}
   cassetteTape: 1
   isCassette1: 0
   isCassette2: 1

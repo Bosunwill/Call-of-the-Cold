@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98117cb6a805ce540bf5db3b5ec754a4, type: 3}
-  m_Name: Cassette Player
+  m_Name: itemPrefab
   m_EditorClassIdentifier: 
-  name: Cassette Player
-  icon: {fileID: 21300000, guid: 9f86f572139b03b4fa9ef4a953b3d813, type: 3}
-  permItem: 1
+  item: {fileID: 11400000}
+  itemName: Prefab
+  icon: {fileID: 0}
+  permItem: 0
   cas1: {fileID: 0}
   cas2: {fileID: 0}
   cas3: {fileID: 0}
   isDefaultItem: 0
-  audi: {fileID: 0}
-  source: {fileID: 0}
   cassetteTape: 0
   isCassette1: 0
   isCassette2: 0

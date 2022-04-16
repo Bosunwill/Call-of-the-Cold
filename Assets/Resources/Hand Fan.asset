@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98117cb6a805ce540bf5db3b5ec754a4, type: 3}
-  m_Name: Cassette Tape 3
+  m_Name: Hand Fan
   m_EditorClassIdentifier: 
-  name: Cassette Tape 3
-  icon: {fileID: 21300000, guid: b52cf914bba38e0458dd8008d5997406, type: 3}
+  item: {fileID: 11400000}
+  itemName: Hand_Fan
+  icon: {fileID: 21300000, guid: 54a11a6835e4c9a4ab317042a60932e9, type: 3}
   permItem: 1
-  cas1: {fileID: 8300000, guid: 54f965fa72d22b042b8992b7f26aa1a3, type: 3}
-  cas2: {fileID: 8300000, guid: 854b0ba9ffe4ddb438c2c38aeaf73001, type: 3}
-  cas3: {fileID: 8300000, guid: c5b5b20a21a45ea4ea94de7558dac08a, type: 3}
+  cas1: {fileID: 0}
+  cas2: {fileID: 0}
+  cas3: {fileID: 0}
   isDefaultItem: 0
-  audi: {fileID: 0}
-  source: {fileID: 0}
-  cassetteTape: 1
+  cassetteTape: 0
   isCassette1: 0
   isCassette2: 0
-  isCassette3: 1
+  isCassette3: 0

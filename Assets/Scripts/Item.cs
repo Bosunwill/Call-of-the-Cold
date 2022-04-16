@@ -3,7 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
 public class Item : ScriptableObject
 {
-   new public string name = "New Item";
+   public Item item;
+   public string itemName = "New Item";
    public Sprite icon = null;
    public bool permItem = false;
    public AudioClip cas1;
@@ -28,5 +29,10 @@ public class Item : ScriptableObject
       // cause event or animation/staus change like new arm attached
 
       Debug.Log("Using " + name);
+   }
+
+   public void Load(ItemsData data)
+   {
+      item = Resources.Load<Item>(data.ItemName);
    }
 }
