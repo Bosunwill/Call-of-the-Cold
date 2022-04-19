@@ -699,6 +699,37 @@ Transform:
   m_Father: {fileID: 1200901755}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &632537314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1011770435088316773, guid: f86ff5d4f105b8748abd0ff481932f37, type: 3}
+  m_PrefabInstance: {fileID: 4632816520499831472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &632537316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632537314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92c04c9706537714bbea98c09a70650a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneNumber: 2
+--- !u!65 &632537317
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632537314}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.81, y: 1.08, z: 0.97}
+  m_Center: {x: -0.52, y: 0, z: 0}
 --- !u!1 &731165217
 GameObject:
   m_ObjectHideFlags: 0
@@ -2065,7 +2096,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  removeButton: {fileID: 0}
   isPlaying: 0
   aud: {fileID: 0}
 --- !u!224 &2325814950833801738
@@ -2290,7 +2320,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  removeButton: {fileID: 0}
   isPlaying: 0
   aud: {fileID: 0}
 --- !u!224 &2325814950870854686
@@ -2440,7 +2469,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  removeButton: {fileID: 0}
   isPlaying: 0
   aud: {fileID: 0}
 --- !u!224 &2325814951168851197
@@ -2630,7 +2658,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  removeButton: {fileID: 0}
   isPlaying: 0
   aud: {fileID: 0}
 --- !u!222 &2325814951245996208
@@ -2740,7 +2767,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  removeButton: {fileID: 0}
   isPlaying: 0
   aud: {fileID: 0}
 --- !u!224 &2325814951245996212
@@ -2890,7 +2916,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  removeButton: {fileID: 0}
   isPlaying: 0
   aud: {fileID: 0}
 --- !u!224 &2325814951251849676
@@ -3040,7 +3065,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  removeButton: {fileID: 0}
   isPlaying: 0
   aud: {fileID: 0}
 --- !u!224 &2325814951307940861
@@ -3265,7 +3289,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  removeButton: {fileID: 0}
   isPlaying: 0
   aud: {fileID: 0}
 --- !u!224 &2325814951424550508
@@ -3478,7 +3501,7 @@ GameObject:
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2325814951869165149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3869,7 +3892,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  removeButton: {fileID: 0}
   isPlaying: 0
   aud: {fileID: 0}
 --- !u!224 &2325814952182969950
@@ -4268,7 +4290,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  removeButton: {fileID: 0}
   isPlaying: 0
   aud: {fileID: 0}
 --- !u!222 &2325814952520412667
