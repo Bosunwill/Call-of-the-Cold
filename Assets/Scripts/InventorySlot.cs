@@ -5,7 +5,7 @@ public class InventorySlot : MonoBehaviour
 {
 
     public Image icon;
-    public Button removeButton;
+    //public Button removeButton;
     Item item;
     public bool isPlaying = false;
 
@@ -22,19 +22,20 @@ public class InventorySlot : MonoBehaviour
         item = newItem;
         icon.sprite = item.icon;
         icon.enabled = true;
+        aud.Play4();
         //removeButton.interactable = true;
     }
 
-    // public void ClearSlot()
-    // {
-    //     //if(item.permItem == false)
-    //     //{
-    //         item = null;   
-    //         icon.sprite = null;
-    //         icon.enabled = false;
-    //         //removeButton.interactable = false;
-    //    // }
-    // }
+     //public void ClearSlot()
+     //{
+     //   if(item.permItem == false)
+     //   {
+     //   item = null;   
+     //   icon.sprite = null;
+     //   icon.enabled = false;
+     // //removeButton.interactable = false;
+     //   }
+     //}
 
     public void OnRemoveButton()
     {
@@ -45,7 +46,7 @@ public class InventorySlot : MonoBehaviour
     {
         if(item != null)
         {
-            if(item.isCassette1 && !aud.audi.isPlaying)
+            if(item.isCassette1 && !aud.audi.isPlaying && item.cassetteTape)
             {
                 aud.Play1();
             }

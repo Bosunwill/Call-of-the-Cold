@@ -9,6 +9,11 @@ public class Inventory : MonoBehaviour
 
     public static Inventory instance;
 
+    const string INV_KEY = "/inv";
+    const string INV_COUNT_KEY = "/inv.count";
+
+ 
+
 
     void Awake()
     {
@@ -18,6 +23,15 @@ public class Inventory : MonoBehaviour
             return;
         }
         instance = this;
+    }
+
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.T))
+        {
+            Load();
+        }
+
     }
 
     #endregion
@@ -58,6 +72,56 @@ public class Inventory : MonoBehaviour
                 onItemChangedCallback.Invoke();
             }
     }
+
+
+    //public void Save()
+    //{
+//
+    //    string key = INV_KEY;
+    //    string countKey = INV_COUNT_KEY;
+//
+    //    SaveSystem.Save(items.Count, countKey);
+//
+//
+    //    for (int i = 0; i < items.Count; i++)
+    //    {
+    //        ItemsData data = new ItemsData(items[i]);
+//
+    //        SaveSystem.Save(data, key + i);
+//
+    //    }
+//
+    //    Debug.Log("Saved All Items!");
+    //}
+//
+
+
+
+    public void Load()
+    {
+
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene("theLobby");
+
+
+
+
+
+       // string key = INV_KEY;
+       // string countKey = INV_COUNT_KEY;
+       // 
+       // int count = SaveSystem.Load<int>(countKey);
+//
+       // for (int i = 0; i < count; i++)
+       // {
+       //     Item item = Instantiate(itemPrefab);
+       //     ItemsData data = SaveSystem.Load<ItemsData>(key + i);
+//
+       //     item.Load(data);
+       //     Add(item);
+       // }
+    }
+    
 
 
     
