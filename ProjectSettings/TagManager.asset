@@ -10,6 +10,7 @@ TagManager:
   - Inv
   - Music
   - ui
+  - Hot
   layers:
   - Default
   - TransparentFX

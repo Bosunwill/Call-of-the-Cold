@@ -47,7 +47,7 @@ public class playerController : MonoBehaviour
     //expanded for ambient temp system later
     void OnTriggerStay(Collider other)
     {
-
+        Debug.Log("triggered");
 
         if (other.gameObject.tag == "Cold" && currentTemp >= -90f)// && currentHealth < 100f)
         {
@@ -55,7 +55,7 @@ public class playerController : MonoBehaviour
 
             Debug.Log("You are cold" + currentHealth);
         }
-        if (other.gameObject.tag == "Hot" && currentTemp <= -23f)
+        if (other.gameObject.tag == "Hot")
         {
             Debug.Log("Hot");
             currentTemp += 1f * Time.deltaTime * 1;
@@ -93,13 +93,16 @@ public class playerController : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        
         currentTemp = normalTemp;
-      //  healthBar.SetMaxHealth(maxHealth);
+
+        
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     void Update()
     {
-
+        healthBar.SetHealth(currentHealth);
         TempGuage();
         // Code for crouching and stoping movement when crouching
         if (Input.GetButtonDown("Crouch"))
