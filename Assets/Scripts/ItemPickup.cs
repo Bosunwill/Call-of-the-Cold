@@ -19,7 +19,7 @@ public class ItemPickup : MonoBehaviour
 
     void PickUp ()
     {
-        Debug.Log("Picking up " + item.name);
+        //Debug.Log("Picking up " + item.name);
         bool wasPickedUp = Inventory.instance.Add(item);
 
         if(wasPickedUp)

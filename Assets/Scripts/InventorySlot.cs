@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,10 +13,12 @@ public class InventorySlot : MonoBehaviour
 
     public AudioLibrary aud;
 
+    public Animator casAnim;
+
 
     public void Start()
     {
-        aud = GameObject.Find("AudioManager").GetComponent<AudioLibrary>();
+        //aud = GameObject.Find("AudioManager").GetComponent<AudioLibrary>();
     }
 
     public void AddItem (Item newItem)
@@ -48,14 +52,23 @@ public class InventorySlot : MonoBehaviour
         {
             if(item.isCassette1 && !aud.audi.isPlaying && item.cassetteTape)
             {
+                casAnim.SetBool("IsPlaying", true);
+                casAnim.SetBool("IsCas1", true);
+                StartCoroutine(EndAnim());
                 aud.Play1();
             }
             if(item.isCassette2)
             {
+                casAnim.SetBool("IsPlaying", true);
+                casAnim.SetBool("IsCas2", true);
+                StartCoroutine(EndAnim());
                 aud.Play2();
             }
             if(item.isCassette3)
             {
+                casAnim.SetBool("IsPlaying", true);
+                casAnim.SetBool("IsCas2", true);
+                StartCoroutine(EndAnim());
                 aud.Play3();
             }
             else
@@ -66,5 +79,14 @@ public class InventorySlot : MonoBehaviour
                 //icon.sprite = null;
             }
         }   
+    }
+
+    IEnumerator EndAnim()
+    {
+        yield return new WaitForSeconds(20f);
+        casAnim.SetBool("IsPlaying", false);
+        casAnim.SetBool("IsCas1", false);
+        casAnim.SetBool("IsCas2", false);
+        casAnim.SetBool("IsCas3", false);
     }
 }

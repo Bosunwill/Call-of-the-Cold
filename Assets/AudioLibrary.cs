@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class AudioLibrary : MonoBehaviour
 {
+    //This script holds the cassette audioclips
+    //The Inventory Slot script searches through this one to find the specific clip needed
     public AudioClip cas1;
     public AudioClip cas2;
     public AudioClip cas3;
 
     public AudioClip added;
     public AudioSource audi;
-    // Start is called before the first frame update
+
+
     void Start()
     {
         audi = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
