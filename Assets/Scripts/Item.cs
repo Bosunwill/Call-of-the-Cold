@@ -15,6 +15,9 @@ public class Item : ScriptableObject
    public bool isCassette1 = false;
    public bool isCassette2 = false;
    public bool isCassette3 = false;
+   public bool slotItem = false;
+   public enum itemType {Batteries, KeyCard, ScrewDriver, CassettePlayer, HandHeldFan, Tape, TheCure}
+   public itemType thisItem = itemType.Batteries;
 
 
    void Update()
