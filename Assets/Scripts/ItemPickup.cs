@@ -6,10 +6,12 @@ using TMPro;
 
 public class ItemPickup : MonoBehaviour
 {
-    InventoryItemControl control;
+    public InventoryItemControl control;
     public bool canPickup = false;
     public bool opened = false;
     public Item item;
+
+    AudioLibrary aud;
 
     public Animator notifAnim;
 
@@ -17,9 +19,10 @@ public class ItemPickup : MonoBehaviour
 
     void Start()
     {
-        control = GameObject.Find("Game UI").GetComponent<InventoryItemControl>();
-        notifText = control.notif.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
-        notifAnim = control.notif.GetComponent<Animator>();
+        control = GameObject.Find("GameManager").GetComponent<InventoryItemControl>();
+        notifAnim = GameObject.Find("Notifs").GetComponent<Animator>();
+        aud = GameObject.Find("GameManager").GetComponent<AudioLibrary>();
+        notifText = GameObject.Find("Notif Text").GetComponent<TextMeshProUGUI>();
     }
 
     void Update()
@@ -36,7 +39,6 @@ public class ItemPickup : MonoBehaviour
 
     void PickUp ()
     {
-        opened = true;
         //bool wasPickedUp = false;
         //Debug.Log("Picking up " + item.name);
         if(item.slotItem)
@@ -61,6 +63,8 @@ public class ItemPickup : MonoBehaviour
         {
             control.casObtained = true;
         }
+        opened = true;
+        aud.Play4();
         
     }
 

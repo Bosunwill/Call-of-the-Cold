@@ -11,6 +11,8 @@ TagManager:
   - Music
   - ui
   - Hot
+  - NeedsCard
+  - GameManager
   layers:
   - Default
   - TransparentFX

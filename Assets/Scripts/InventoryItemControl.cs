@@ -19,8 +19,13 @@ public class InventoryItemControl : MonoBehaviour
 
     void Start()
     {
+        cassettePlayer = GameObject.Find("Cassette");
+        fan = GameObject.Find("Handheld fan");
         fan.SetActive(false);
         cassettePlayer.SetActive(false);
+        notif = GameObject.Find("Notifs");
+        casAnim = cassettePlayer.GetComponent<Animator>();
+        fanAnim = fan.GetComponent<Animator>();
     }
 
     // Update is called once per frame

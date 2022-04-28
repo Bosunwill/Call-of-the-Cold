@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class InventoryUI : MonoBehaviour
     public bool hasCassette = false;
     public bool hasFan = false;
     public bool inventoryUp = false;
+    public bool cardDoorIsNear = false;
 
     InventorySlot[] slots;
     Inventory inventory;
@@ -20,7 +23,7 @@ public class InventoryUI : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<playerController>();
         inventory = Inventory.instance;
         inventory.onItemChangedCallback += UpdateUI;
-        inventoryUI.SetActive(false);
+        StartCoroutine(WaitStart());
 
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
     }
@@ -74,5 +77,27 @@ public class InventoryUI : MonoBehaviour
         inventoryUI.SetActive(false);
         player.enabled = true;
         inventoryUp = false;
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("NeedsCard"))
+        {
+            cardDoorIsNear = true;
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.CompareTag("NeedsCard"))
+        {
+            cardDoorIsNear = false;
+        }
+    }
+
+    IEnumerator WaitStart()
+    {
+        yield return new WaitForSeconds(0.1f);
+        inventoryUI.SetActive(false);
     }
 }
