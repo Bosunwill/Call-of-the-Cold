@@ -10,17 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98117cb6a805ce540bf5db3b5ec754a4, type: 3}
-  m_Name: Cassette Tape 1
+  m_Name: Cassette Player
   m_EditorClassIdentifier: 
   item: {fileID: 11400000}
-  itemName: Cassette1
-  icon: {fileID: 21300000, guid: 1bdbca96d16f88d4b8272ccd310e0d8a, type: 3}
+  itemName: Cassette_Player
+  icon: {fileID: 21300000, guid: 106fbc061b221a74884d06a92b550263, type: 3}
   permItem: 1
-  cas1: {fileID: 8300000, guid: 54f965fa72d22b042b8992b7f26aa1a3, type: 3}
-  cas2: {fileID: 8300000, guid: 854b0ba9ffe4ddb438c2c38aeaf73001, type: 3}
-  cas3: {fileID: 8300000, guid: c5b5b20a21a45ea4ea94de7558dac08a, type: 3}
+  cas1: {fileID: 0}
+  cas2: {fileID: 0}
+  cas3: {fileID: 0}
   isDefaultItem: 0
-  cassetteTape: 1
-  isCassette1: 1
+  cassetteTape: 0
+  isCassette1: 0
   isCassette2: 0
   isCassette3: 0
+  slotItem: 0
+  thisItem: 3

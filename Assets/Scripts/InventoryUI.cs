@@ -6,13 +6,21 @@ public class InventoryUI : MonoBehaviour
 
     public GameObject inventoryUI;
 
+    public bool hasCassette = false;
+    public bool hasFan = false;
+    public bool inventoryUp = false;
+
     InventorySlot[] slots;
     Inventory inventory;
+    playerController player;
+
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player").GetComponent<playerController>();
         inventory = Inventory.instance;
         inventory.onItemChangedCallback += UpdateUI;
+        inventoryUI.SetActive(false);
 
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
     }
@@ -23,7 +31,14 @@ public class InventoryUI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             Debug.Log("Activating Inv");
-            inventoryUI.SetActive(!inventoryUI.activeSelf);
+            if(inventoryUp)
+            {
+                TurnOffInventory();
+            }
+            else if(!inventoryUp)
+            {
+                TurnOnInventory();
+            }
         }
     }
 
@@ -40,7 +55,24 @@ public class InventoryUI : MonoBehaviour
            //     slots[i].ClearSlot();
            // }
         }
-
         
+    }
+
+
+    public void TurnOnInventory()
+    {
+        //display inventory
+        inventoryUI.SetActive(true);
+        //player can't move
+        player.enabled = false;
+        //set boolean 
+        inventoryUp = true;
+    }
+
+    public void TurnOffInventory()
+    {
+        inventoryUI.SetActive(false);
+        player.enabled = true;
+        inventoryUp = false;
     }
 }

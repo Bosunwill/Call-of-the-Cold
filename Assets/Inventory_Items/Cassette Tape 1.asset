@@ -10,17 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98117cb6a805ce540bf5db3b5ec754a4, type: 3}
-  m_Name: Screwdriver
+  m_Name: Cassette Tape 1
   m_EditorClassIdentifier: 
   item: {fileID: 11400000}
-  itemName: Screw_driver
-  icon: {fileID: 21300000, guid: 30de2ef84ad4ded4da3b2249c4d68380, type: 3}
+  itemName: Cassette1
+  icon: {fileID: 21300000, guid: 1bdbca96d16f88d4b8272ccd310e0d8a, type: 3}
   permItem: 1
-  cas1: {fileID: 0}
-  cas2: {fileID: 0}
-  cas3: {fileID: 0}
+  cas1: {fileID: 8300000, guid: 34f9143123587e648a20655008726983, type: 3}
+  cas2: {fileID: 8300000, guid: 9494c8226f7b5014b9631bb161f7f626, type: 3}
+  cas3: {fileID: 8300000, guid: be6b60819bc55fc47b90394a84869fd2, type: 3}
   isDefaultItem: 0
-  cassetteTape: 0
-  isCassette1: 0
+  cassetteTape: 1
+  isCassette1: 1
   isCassette2: 0
   isCassette3: 0
+  slotItem: 1
+  thisItem: 5

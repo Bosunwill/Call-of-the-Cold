@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98117cb6a805ce540bf5db3b5ec754a4, type: 3}
-  m_Name: Hand Fan
+  m_Name: itemPrefab
   m_EditorClassIdentifier: 
   item: {fileID: 11400000}
-  itemName: Hand_Fan
-  icon: {fileID: 21300000, guid: 54a11a6835e4c9a4ab317042a60932e9, type: 3}
-  permItem: 1
+  itemName: Prefab
+  icon: {fileID: 0}
+  permItem: 0
   cas1: {fileID: 0}
   cas2: {fileID: 0}
   cas3: {fileID: 0}
@@ -24,3 +24,5 @@ MonoBehaviour:
   isCassette1: 0
   isCassette2: 0
   isCassette3: 0
+  slotItem: 1
+  thisItem: 0

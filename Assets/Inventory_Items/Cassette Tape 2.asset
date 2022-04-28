@@ -10,17 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98117cb6a805ce540bf5db3b5ec754a4, type: 3}
-  m_Name: Keycard
+  m_Name: Cassette Tape 2
   m_EditorClassIdentifier: 
   item: {fileID: 11400000}
-  itemName: Key_Card
-  icon: {fileID: 21300000, guid: a23f53e77b4eb9c4081e4ed4430c1295, type: 3}
-  permItem: 0
-  cas1: {fileID: 0}
-  cas2: {fileID: 0}
-  cas3: {fileID: 0}
+  itemName: Cassette2
+  icon: {fileID: 21300000, guid: 6899f4d01770b8f4a822539ae70e2ff1, type: 3}
+  permItem: 1
+  cas1: {fileID: 8300000, guid: 34f9143123587e648a20655008726983, type: 3}
+  cas2: {fileID: 8300000, guid: 9494c8226f7b5014b9631bb161f7f626, type: 3}
+  cas3: {fileID: 8300000, guid: be6b60819bc55fc47b90394a84869fd2, type: 3}
   isDefaultItem: 0
-  cassetteTape: 0
+  cassetteTape: 1
   isCassette1: 0
-  isCassette2: 0
+  isCassette2: 1
   isCassette3: 0
+  slotItem: 1
+  thisItem: 5
