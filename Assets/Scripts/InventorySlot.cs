@@ -16,6 +16,8 @@ public class InventorySlot : MonoBehaviour
 
     public AudioLibrary aud;
 
+    public GameObject text;
+
 
     public void Start()
     {
@@ -64,6 +66,7 @@ public class InventorySlot : MonoBehaviour
                         typeAnim.StartCoroutine(typeAnim.TrialType(1f));
                         StartCoroutine(EndAnim(18f));
                         aud.Play1();
+                        text.SetActive(true);
                     }
                     
                 }
@@ -75,6 +78,7 @@ public class InventorySlot : MonoBehaviour
                         control.casAnim.SetBool("IsCas2", true);
                         StartCoroutine(EndAnim(12.5f));
                         aud.Play2();
+                        text.SetActive(true);
                     }
                 }
                 if(item.isCassette3)
@@ -85,6 +89,7 @@ public class InventorySlot : MonoBehaviour
                         control.casAnim.SetBool("IsCas2", true);
                         StartCoroutine(EndAnim(29f));
                         aud.Play3();
+                        text.SetActive(true);
                     }
                 } 
             }
@@ -93,8 +98,9 @@ public class InventorySlot : MonoBehaviour
             {
                 Inventory.instance.Remove(item);
                 item = null;
-                icon = null;
+                icon.enabled = false;
                 control.fanAnim.SetBool("StartFan", true);
+                aud.PlayFan();
             }
             else
             {

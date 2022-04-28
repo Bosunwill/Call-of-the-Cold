@@ -28,6 +28,11 @@ public class ITypewriter : MonoBehaviour
         //     StartCoroutine("TypeWriter");
         // }
         cassetteText = GetComponent<TextMeshProUGUI>();
+        if (cassetteText != null)
+        {
+            cassetteText.text = " ";
+            //StartCoroutine("TypeWriter");
+        }
         
     }
 
