@@ -28,26 +28,31 @@ public class ItemPickup : MonoBehaviour
         {
             PickUp();
         }
+        if(opened)
+        {
+            canPickup = false;
+        }
     }
 
     void PickUp ()
     {
-        bool wasPickedUp = false;
+        opened = true;
+        //bool wasPickedUp = false;
         //Debug.Log("Picking up " + item.name);
         if(item.slotItem)
         {
-            wasPickedUp = Inventory.instance.Add(item);
+            Debug.Log("slot is running");
+            Inventory.instance.Add(item);
         }
         
         control.notif.transform.GetChild(0).GetComponent<Image>().sprite = item.icon;
 
         notifAnim.SetTrigger("NotifTrigger");
-        notifText.text = item.name + "has been added to inventory";
+        notifText.text = "Picked up " + item.name;
 
-        if(wasPickedUp)
-        {
-            opened = true;
-        }
+        // if(wasPickedUp)
+        // {
+        // }
         if(item.thisItem == Item.itemType.HandHeldFan)
         {
             control.fanObtained = true;
@@ -63,8 +68,11 @@ public class ItemPickup : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("canPickup is now true!");
-            canPickup = true;
+            if(!opened)
+            {
+                Debug.Log("canPickup is now true!");
+                canPickup = true;
+            }
         }
     }
 
@@ -72,8 +80,11 @@ public class ItemPickup : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("canPickup is now false");
-            canPickup = false;
+            if(!opened)
+            {
+                Debug.Log("canPickup is now true!");
+                canPickup = true;
+            }
         }
     }
 }

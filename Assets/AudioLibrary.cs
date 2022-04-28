@@ -11,6 +11,8 @@ public class AudioLibrary : MonoBehaviour
     public AudioClip cas3;
 
     public AudioClip added;
+
+    public AudioClip fanSound;
     public AudioSource audi;
 
 
@@ -40,5 +42,10 @@ public class AudioLibrary : MonoBehaviour
     public void Play4()
     {
         audi.PlayOneShot(added);
+    }
+
+    public void PlayFan()
+    {
+        audi.PlayOneShot(fanSound);
     }
 }
