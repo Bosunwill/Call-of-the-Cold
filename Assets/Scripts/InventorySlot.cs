@@ -23,15 +23,16 @@ public class InventorySlot : MonoBehaviour
     {
         //aud = GameObject.Find("AudioManager").GetComponent<AudioLibrary>();
         invUI = GameObject.Find("Player").GetComponent<InventoryUI>();
-        control = GameObject.Find("Game UI").GetComponent<InventoryItemControl>();
+        control = GameObject.Find("GameManager").GetComponent<InventoryItemControl>();
+        aud = GameObject.Find("GameManager").GetComponent<AudioLibrary>();
     }
 
     public void AddItem (Item newItem)
     {
+        Debug.Log("Adding Item");
         item = newItem;
         icon.sprite = item.icon;
         icon.enabled = true;
-        aud.Play4();
         //removeButton.interactable = true;
     }
 
@@ -61,12 +62,12 @@ public class InventorySlot : MonoBehaviour
                 {
                     if(control.casObtained)
                     {
+                        text.SetActive(true);
                         control.casAnim.SetBool("IsPlaying", true);
                         control.casAnim.SetBool("IsCas1", true);
                         typeAnim.StartCoroutine(typeAnim.TrialType(1f));
                         StartCoroutine(EndAnim(18f));
                         aud.Play1();
-                        text.SetActive(true);
                     }
                     
                 }
@@ -74,22 +75,22 @@ public class InventorySlot : MonoBehaviour
                 {
                     if(control.casObtained)
                     {
+                        text.SetActive(true);
                         control.casAnim.SetBool("IsPlaying", true);
                         control.casAnim.SetBool("IsCas2", true);
                         StartCoroutine(EndAnim(12.5f));
                         aud.Play2();
-                        text.SetActive(true);
                     }
                 }
                 if(item.isCassette3)
                 {
                     if(control.casObtained)
                     {
+                        text.SetActive(true);
                         control.casAnim.SetBool("IsPlaying", true);
                         control.casAnim.SetBool("IsCas2", true);
                         StartCoroutine(EndAnim(29f));
                         aud.Play3();
-                        text.SetActive(true);
                     }
                 } 
             }
@@ -101,6 +102,16 @@ public class InventorySlot : MonoBehaviour
                 icon.enabled = false;
                 control.fanAnim.SetBool("StartFan", true);
                 aud.PlayFan();
+            }
+
+            if(item.thisItem == Item.itemType.KeyCard)
+            {
+                if(invUI.cardDoorIsNear)
+                {
+                    Inventory.instance.Remove(item);
+                    item = null;
+                    icon.enabled = false;
+                }
             }
             else
             {
