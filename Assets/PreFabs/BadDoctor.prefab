@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3502637311292504288}
   - component: {fileID: 3502637311292504289}
   - component: {fileID: 3502637311292504294}
+  - component: {fileID: 2641683917375330358}
   m_Layer: 0
   m_Name: BadDoctor
   m_TagString: Untagged
@@ -166,6 +167,10 @@ MonoBehaviour:
   reactionTime: 1
   currentState: 0
   waitAtPointInterval: 2
+  anim: {fileID: 0}
+  isPatrolling: 0
+  isSearching: 0
+  isChasing: 0
   curve:
     serializedVersion: 2
     m_Curve: []
@@ -189,6 +194,20 @@ MonoBehaviour:
   emitter: {fileID: 3502637312443997367}
   canSeePlayer: 0
   sightDistance: 10
+--- !u!114 &2641683917375330358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3502637311292504218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7749ae4b385e24db2376ae7205a040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theCam: {fileID: 0}
+  useStaticBillboard: 0
 --- !u!1 &3502637312443997364
 GameObject:
   m_ObjectHideFlags: 0

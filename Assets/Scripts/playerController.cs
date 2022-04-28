@@ -34,7 +34,7 @@ public class playerController : MonoBehaviour
 
     public float maxHealth = 100;
     [Range(0, 100)]
-    public float currentHealth;
+    public float currentHealth = 100;
     // Temps are in - because they need to rotate to the right
 
     public float normalTemp = -45f;

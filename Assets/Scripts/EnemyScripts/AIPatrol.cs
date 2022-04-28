@@ -24,9 +24,9 @@ public class AIPatrol : MonoBehaviour
     //Animator Booleans
 
     public Animator anim;
-    public bool isPatrolling;
-    public bool isSearching;
-    public bool isChasing;
+    public bool isMoving = false;
+    public bool isSearching = false;
+    
     IEnumerator wait;
 
     state lastFrameState;
@@ -38,7 +38,7 @@ public class AIPatrol : MonoBehaviour
 
         lastFrameState = currentState;
 
-        anim.SetBool("isPatrolling", isPatrolling);
+        anim.SetBool("isMoving", isMoving);
         anim.SetBool("isSearching", isSearching);
         //anim.SetBool();
         wait = WaitAtPatrolPoint();
@@ -65,8 +65,6 @@ public class AIPatrol : MonoBehaviour
         // cycling to the start if necessary.
         destPoint = (destPoint + 1) % points.Length;
 
-        isSearching = false;
-        isPatrolling = true;
         currentState = state.Patrolling;
 
     }
@@ -147,7 +145,7 @@ public class AIPatrol : MonoBehaviour
     }
 
     void Update()
-    {            Debug.Log("" + isPatrolling + isSearching);
+    {          
         switch (currentState)
         {
             case state.Patrolling: Patrolling(); break;
@@ -163,7 +161,20 @@ public class AIPatrol : MonoBehaviour
         }
 
         lastFrameState = currentState;
-        
+
+        if(currentState != state.Patrolling){
+            isSearching = true;
+        }else{
+            isSearching = false;
+        }       
+
+        if(currentState != state.Searching){
+            isMoving = true;
+        }else{
+            isMoving = false;
+        }
+
+        Debug.Log("The doctor is moving " + isMoving + " And is searching" + isSearching);
 
     }
 
@@ -173,9 +184,6 @@ public class AIPatrol : MonoBehaviour
 
     IEnumerator WaitAtPatrolPoint()
     {
-        isPatrolling = false;
-        isSearching = true;
-
         waitingAtPoint = true;
         //yield return new WaitForSeconds(1);
         float timer = 0;
@@ -209,7 +217,7 @@ public class AIPatrol : MonoBehaviour
 
 
         GotoNextPoint();
-        isSearching = false;
         waitingAtPoint = false;
+
     }
 }
