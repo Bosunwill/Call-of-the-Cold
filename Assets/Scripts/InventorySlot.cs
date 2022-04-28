@@ -1,8 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
+    public ITypewriter typeAnim;
+    InventoryUI invUI;
+    InventoryItemControl control;
 
     public Image icon;
     //public Button removeButton;
@@ -14,7 +19,9 @@ public class InventorySlot : MonoBehaviour
 
     public void Start()
     {
-        aud = GameObject.Find("AudioManager").GetComponent<AudioLibrary>();
+        //aud = GameObject.Find("AudioManager").GetComponent<AudioLibrary>();
+        invUI = GameObject.Find("Player").GetComponent<InventoryUI>();
+        control = GameObject.Find("Game UI").GetComponent<InventoryItemControl>();
     }
 
     public void AddItem (Item newItem)
@@ -46,17 +53,48 @@ public class InventorySlot : MonoBehaviour
     {
         if(item != null)
         {
-            if(item.isCassette1 && !aud.audi.isPlaying && item.cassetteTape)
+            if(item.thisItem == Item.itemType.Tape)
             {
-                aud.Play1();
+               if(item.isCassette1 && !aud.audi.isPlaying && item.cassetteTape)
+                {
+                    if(control.casObtained)
+                    {
+                        control.casAnim.SetBool("IsPlaying", true);
+                        control.casAnim.SetBool("IsCas1", true);
+                        typeAnim.StartCoroutine(typeAnim.TrialType(1f));
+                        StartCoroutine(EndAnim(18f));
+                        aud.Play1();
+                    }
+                    
+                }
+                if(item.isCassette2)
+                {
+                    if(control.casObtained)
+                    {
+                        control.casAnim.SetBool("IsPlaying", true);
+                        control.casAnim.SetBool("IsCas2", true);
+                        StartCoroutine(EndAnim(12.5f));
+                        aud.Play2();
+                    }
+                }
+                if(item.isCassette3)
+                {
+                    if(control.casObtained)
+                    {
+                        control.casAnim.SetBool("IsPlaying", true);
+                        control.casAnim.SetBool("IsCas2", true);
+                        StartCoroutine(EndAnim(29f));
+                        aud.Play3();
+                    }
+                } 
             }
-            if(item.isCassette2)
+            
+            if(item.thisItem == Item.itemType.Batteries)
             {
-                aud.Play2();
-            }
-            if(item.isCassette3)
-            {
-                aud.Play3();
+                Inventory.instance.Remove(item);
+                item = null;
+                icon = null;
+                control.fanAnim.SetBool("StartFan", true);
             }
             else
             {
@@ -66,5 +104,14 @@ public class InventorySlot : MonoBehaviour
                 //icon.sprite = null;
             }
         }   
+    }
+
+    IEnumerator EndAnim(float animLength)
+    {
+        yield return new WaitForSeconds(animLength);
+        control.casAnim.SetBool("IsPlaying", false);
+        control.casAnim.SetBool("IsCas1", false);
+        control.casAnim.SetBool("IsCas2", false);
+        control.casAnim.SetBool("IsCas3", false);
     }
 }
