@@ -38,8 +38,8 @@ public class AIPatrol : MonoBehaviour
 
         lastFrameState = currentState;
 
-        anim.SetBool("isMoving", isMoving);
-        anim.SetBool("isSearching", isSearching);
+        //anim.SetFloat("isMoving", isMoving);
+        //anim.SetBool("isSearching", isSearching);
         //anim.SetBool();
         wait = WaitAtPatrolPoint();
         // Disabling auto-braking allows for continuous movement
@@ -64,6 +64,7 @@ public class AIPatrol : MonoBehaviour
         // Choose the next point in the array as the destination,
         // cycling to the start if necessary.
         destPoint = (destPoint + 1) % points.Length;
+        isMoving = true;
 
         currentState = state.Patrolling;
 
@@ -162,18 +163,6 @@ public class AIPatrol : MonoBehaviour
 
         lastFrameState = currentState;
 
-        if(currentState != state.Patrolling){
-            isSearching = true;
-        }else{
-            isSearching = false;
-        }       
-
-        if(currentState != state.Searching){
-            isMoving = true;
-        }else{
-            isMoving = false;
-        }
-
         Debug.Log("The doctor is moving " + isMoving + " And is searching" + isSearching);
 
     }
@@ -185,6 +174,7 @@ public class AIPatrol : MonoBehaviour
     IEnumerator WaitAtPatrolPoint()
     {
         waitingAtPoint = true;
+        isMoving = false;
         //yield return new WaitForSeconds(1);
         float timer = 0;
         while (timer < 1)
