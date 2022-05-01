@@ -9667,7 +9667,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a4fe79b055d752643915931af7429fea, type: 3}
   m_PrefabInstance: {fileID: 1522844121}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1522844123 stripped
+=======
+  m_GameObject: {fileID: 8478186881783603553}
+  m_LocalRotation: {x: -1, y: -0.00019193484, z: 0, w: 0}
+  m_LocalPosition: {x: -1.7577578, y: -0.1191973, z: 0.80690485}
+  m_LocalScale: {x: -0.971666, y: -0.971928, z: -0.971794}
+  m_Children:
+  - {fileID: 6714460433273522951}
+  - {fileID: 1519959871865608089}
+  - {fileID: 3409978753848715243}
+  - {fileID: 7511323456166969324}
+  - {fileID: 6020080770900581126}
+  - {fileID: 4115206216384407335}
+  - {fileID: 847938389230066824}
+  - {fileID: 3766045078281121567}
+  m_Father: {fileID: 800437852456689336}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -180, y: 0, z: -0.022}
+--- !u!1 &337766141712423766
+>>>>>>> Stashed changes
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5921505478000457673, guid: a4fe79b055d752643915931af7429fea, type: 3}
   m_PrefabInstance: {fileID: 1522844121}
@@ -20695,13 +20715,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981871522717454400}
-  m_LocalRotation: {x: 0.000000481576, y: -0.000014057262, z: -0.000004349378, w: 1}
+  m_LocalRotation: {x: -0.000015081466, y: -0.000008707287, z: 0.86602545, w: 0.49999994}
   m_LocalPosition: {x: -0.02180332, y: -0.01441925, z: -0.06307832}
   m_LocalScale: {x: 0.879662, y: 0.548032, z: 2.229897}
   m_Children: []
   m_Father: {fileID: 1105083558342402196}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.002, z: 120}
 --- !u!4 &3254877975988189944
 Transform:
   m_ObjectHideFlags: 0
@@ -20945,7 +20965,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7455865466383755479}
-  m_LocalRotation: {x: -0.000000059604638, y: -0.000000119209275, z: -0.7065661, w: 0.70764714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.6308545, y: 0.04697926, z: 1.1426427}
   m_LocalScale: {x: 0.999868, y: 1.000138, z: 1}
   m_Children:
@@ -20958,7 +20978,7 @@ Transform:
   - {fileID: 9012137108635435117}
   m_Father: {fileID: 2616094297668634763}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.912}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3405911212747985709
 Transform:
   m_ObjectHideFlags: 0
@@ -29318,7 +29338,7 @@ Animator:
   m_GameObject: {fileID: 2532705102693679520}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 82ccfc2180c545c4cbb0ded1c0c199d0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -30364,6 +30384,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3402732478602290543}
+  - component: {fileID: 7455865466383755480}
   m_Layer: 0
   m_Name: Door Pivot (Rotate This)
   m_TagString: Untagged
@@ -30371,6 +30392,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7455865466383755480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7455865466383755479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425cacb850f73da45bd9b880c1965466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Door: {fileID: 0}
+  openTrigger: 0
+  closeTrigger: 0
+  DoorOpen: DoorOpen
+  DoorClose: DoorClose
+  DoorOpen2: DoorOpen
+  DoorClose2: DoorClose
+  OpenLeftDoorExit: DoorOpen
+  CloseLeftDoorExit: DoorClose
+  OpenRightDoorExit: DoorOpen
+  CloseRightDoorExit: DoorClose
+  OpenFreezerDoor: DoorOpen
+  CloseFreezerDoor: DoorClose
+  OpenFreezerDoor2: DoorOpen
+  CloseFreezerDoor2: DoorClose
 --- !u!23 &7476362174523546698
 MeshRenderer:
   m_ObjectHideFlags: 0
