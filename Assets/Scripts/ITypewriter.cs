@@ -6,13 +6,11 @@ using TMPro;
 
 public class ITypewriter : MonoBehaviour
 {
-    public enum level {Morgue, Lobby, Psych, Lab}
-    public level thisLevel = level.Morgue;
 
     Text _text;
-    TextMeshProUGUI cassetteText;
+    [SerializeField] TextMeshProUGUI cassetteText;
     string writer;
-    //[SerializeField] float delayBeforeStart = 0f;
+    [SerializeField] float delayBeforeStart = 0f;
     [SerializeField] float timeBtwChars = 0.1f;
     [SerializeField] string leadingChar = "";
     [SerializeField] bool leadingCharBeforeDelay = false;
@@ -20,13 +18,13 @@ public class ITypewriter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //_text = GetComponent<Text>()!;
-        // if (_text != null)
-        // {
-        //     writer = _text.text;
-        //     _text.text = "";
-        //     StartCoroutine("TypeWriter");
-        // }
+        _text = GetComponent<Text>()!;
+        if (_text != null)
+        {
+            writer = _text.text;
+            _text.text = "";
+            StartCoroutine("TypeWriter");
+        }
         cassetteText = GetComponent<TextMeshProUGUI>();
         if (cassetteText != null)
         {
@@ -38,21 +36,9 @@ public class ITypewriter : MonoBehaviour
 
     void Update()
     {
-        if(thisLevel == level.Morgue)
-        {
-            writer = "The human lifespan is so finite. So many discoveries could be made with just a little more time! Maybe there's someway to extend one's lifespan...";
-        }
-        if(thisLevel == level.Lobby)
-        {
-            writer = "I don't think the director's idea is feasible. I can't bring it up to him since he started firing even veteran doctors for calling the idea dangerous. Back to work I suppose...";
-        }
-        if(thisLevel == level.Psych)
-        {
-            writer = "I think my cure for mortality is almost complete! However i've noticed some undesirable side effects amonsgt my experiments. The... (Say with digust) distastful side effects seems to be spreading among the groups. Even i haven't been feelling up to par. May this not be the last the world hears from Victor Asimov";
-        }
     }
 
-    IEnumerator TypeWriter(float delayBeforeStart)
+    IEnumerator TypeWriter()
     {
         _text.text = leadingCharBeforeDelay ? leadingChar : "";
         yield return new WaitForSeconds(delayBeforeStart);
@@ -72,11 +58,11 @@ public class ITypewriter : MonoBehaviour
         }
     }
 
-    public IEnumerator TrialType(float delayBeforeStart)
+    public IEnumerator TrialType(string casText)
     {
         cassetteText.text = leadingCharBeforeDelay ? leadingChar : "";
-        yield return new WaitForSeconds(delayBeforeStart);
-        foreach (char c in writer)
+        yield return new WaitForSeconds(1);
+        foreach (char c in casText)
         {
             if(cassetteText.text.Length > 0)
             {
@@ -84,7 +70,7 @@ public class ITypewriter : MonoBehaviour
             }
             cassetteText.text += c;
             cassetteText.text += leadingChar;
-            yield return new WaitForSeconds(timeBtwChars);
+            yield return new WaitForSeconds(0.07f);
         }
         if(leadingChar != "")
         {

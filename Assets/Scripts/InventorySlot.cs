@@ -11,27 +11,33 @@ public class InventorySlot : MonoBehaviour
 
     public Image icon;
     //public Button removeButton;
-    Item item;
+    public Item item;
     public bool isPlaying = false;
+
+    public bool slotTaken = false;
 
     public AudioLibrary aud;
 
     public GameObject text;
 
+    public GameObject fanText;
+
 
     public void Start()
     {
-        //aud = GameObject.Find("AudioManager").GetComponent<AudioLibrary>();
-        invUI = GameObject.Find("Player").GetComponent<InventoryUI>();
-        control = GameObject.Find("Game UI").GetComponent<InventoryItemControl>();
+        aud = GameObject.Find("GameManager").GetComponent<AudioLibrary>();
+        invUI = GameObject.Find("GameManager").GetComponent<InventoryUI>();
+        control = GameObject.Find("GameManager").GetComponent<InventoryItemControl>();
     }
 
     public void AddItem (Item newItem)
     {
+        Debug.Log("I am " + this.gameObject.name + " and I have added " + newItem);
+        slotTaken = true;
         item = newItem;
         icon.sprite = item.icon;
+        //control.icons.Add(icon.sprite);
         icon.enabled = true;
-        aud.Play4();
         //removeButton.interactable = true;
     }
 
@@ -61,12 +67,12 @@ public class InventorySlot : MonoBehaviour
                 {
                     if(control.casObtained)
                     {
+                        text.SetActive(true);
                         control.casAnim.SetBool("IsPlaying", true);
                         control.casAnim.SetBool("IsCas1", true);
-                        typeAnim.StartCoroutine(typeAnim.TrialType(1f));
-                        StartCoroutine(EndAnim(18f));
+                        typeAnim.StartCoroutine(typeAnim.TrialType(aud.cas1Text));
+                        StartCoroutine(EndAnim(19f));
                         aud.Play1();
-                        text.SetActive(true);
                     }
                     
                 }
@@ -74,50 +80,67 @@ public class InventorySlot : MonoBehaviour
                 {
                     if(control.casObtained)
                     {
+                        text.SetActive(true);
                         control.casAnim.SetBool("IsPlaying", true);
                         control.casAnim.SetBool("IsCas2", true);
-                        StartCoroutine(EndAnim(12.5f));
+                        typeAnim.StartCoroutine(typeAnim.TrialType(aud.cas2Text));
+                        StartCoroutine(EndAnim(15f));
                         aud.Play2();
-                        text.SetActive(true);
                     }
                 }
                 if(item.isCassette3)
                 {
                     if(control.casObtained)
                     {
+                        text.SetActive(true);
                         control.casAnim.SetBool("IsPlaying", true);
                         control.casAnim.SetBool("IsCas2", true);
-                        StartCoroutine(EndAnim(29f));
+                        typeAnim.StartCoroutine(typeAnim.TrialType(aud.cas3Text));
+                        StartCoroutine(EndAnim(35f));
                         aud.Play3();
-                        text.SetActive(true);
                     }
                 } 
             }
             
             if(item.thisItem == Item.itemType.Batteries)
             {
-                Inventory.instance.Remove(item);
-                item = null;
-                icon.enabled = false;
-                control.fanAnim.SetBool("StartFan", true);
-                aud.PlayFan();
+                if(control.fanObtained)
+                {
+                    Inventory.instance.Remove(item);
+                    item = null;
+                    icon.enabled = false;
+                    control.fanAnim.SetBool("StartFan", true);
+                    aud.PlayFan();
+                }
+                else if(!control.fanObtained)
+                {
+                    StartCoroutine(DisplayFanText());
+                }
             }
-            else
-            {
-                item.Use();
-                //item = null;
-                //icon.enabled = false;
-                //icon.sprite = null;
-            }
+            // else
+            // {
+            //     item.Use();
+            //     //item = null;
+            //     //icon.enabled = false;
+            //     //icon.sprite = null;
+            // }
         }   
     }
 
     IEnumerator EndAnim(float animLength)
     {
         yield return new WaitForSeconds(animLength);
+        text.SetActive(false);
         control.casAnim.SetBool("IsPlaying", false);
         control.casAnim.SetBool("IsCas1", false);
         control.casAnim.SetBool("IsCas2", false);
         control.casAnim.SetBool("IsCas3", false);
+    }
+
+    IEnumerator DisplayFanText()
+    {
+        fanText.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        fanText.SetActive(false);
     }
 }

@@ -10,6 +10,13 @@ public class AudioLibrary : MonoBehaviour
     public AudioClip cas2;
     public AudioClip cas3;
 
+    public string cas1Text;
+    public string cas2Text;
+    public string cas3Text;
+
+    
+    [Range(0f, 1f)]
+    public float addedVol = 0.5f;
     public AudioClip added;
 
     public AudioClip fanSound;
@@ -19,6 +26,9 @@ public class AudioLibrary : MonoBehaviour
     void Start()
     {
         audi = GetComponent<AudioSource>();
+        cas1Text = "The human lifespan is so finite. So many discoveries could be made with just a little more time! If only there was someway to extend one's lifespan...";
+        cas2Text = "I don't think the director's idea is feasible. I can't bring it up to him because anybody that says it's dangerous gets fire on the spot. Guess it's back to work...";
+        cas3Text = "I think my cure for mortality is almost complete! However I have noticed some undesirable side effects among my experiments. The... distastful side effects seems to be spreading among the groups. Even i haven't been feelling up to par. May this not be the last the world hears from Victor Asimov";
     }
 
     void Update()
@@ -41,7 +51,7 @@ public class AudioLibrary : MonoBehaviour
 
     public void Play4()
     {
-        audi.PlayOneShot(added);
+        audi.PlayOneShot(added, addedVol);
     }
 
     public void PlayFan()

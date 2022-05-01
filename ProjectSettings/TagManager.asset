@@ -11,6 +11,9 @@ TagManager:
   - Music
   - ui
   - Hot
+  - Images
+  - KeyCardDoor
+  - ScrewDriverDoor
   layers:
   - Default
   - TransparentFX

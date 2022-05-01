@@ -9,6 +9,7 @@ public class SceneChanger : MonoBehaviour
     
 private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Loading Next Scene");
         SceneManager.LoadScene(sceneBuildIndex: sceneNumber);
     }
 

@@ -80,8 +80,7 @@ public class playerController : MonoBehaviour
     }
 
 
-    [SerializeField]
-    Transform tempArrow;
+    public Transform tempArrow;
 
     void TempGuage()
     {
