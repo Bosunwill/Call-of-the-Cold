@@ -19,7 +19,7 @@ MonoBehaviour:
   cas1: {fileID: 0}
   cas2: {fileID: 0}
   cas3: {fileID: 0}
-  isDefaultItem: 1
+  isDefaultItem: 0
   cassetteTape: 0
   isCassette1: 0
   isCassette2: 0

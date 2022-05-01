@@ -12,6 +12,8 @@ public class Inventory : MonoBehaviour
     const string INV_KEY = "/inv";
     const string INV_COUNT_KEY = "/inv.count";
 
+    public bool outOfRoom = false;
+
  
 
 
@@ -48,6 +50,7 @@ public class Inventory : MonoBehaviour
 
             if(items.Count >= space)
             {
+                outOfRoom = true;
                 Debug.Log("Not enough room.");
                 return false;
             }
