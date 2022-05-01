@@ -115,6 +115,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 782247063476515302, guid: 602da53881462d34b8fa2f403ade302a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2548013145532072668, guid: 602da53881462d34b8fa2f403ade302a, type: 3}
+      propertyPath: interactText
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3608330350469509888, guid: 602da53881462d34b8fa2f403ade302a, type: 3}
       propertyPath: m_Name
       value: PlayerPrefab
@@ -126,7 +134,7 @@ PrefabInstance:
     - target: {fileID: 4251943563176370309, guid: 602da53881462d34b8fa2f403ade302a, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: fd16e2b99f696f34394ab299b64177c8, type: 2}
+      objectReference: {fileID: 9100000, guid: 7d417bca9b5d3ea418e13755ebcc4f49, type: 2}
     - target: {fileID: 4251943563838130515, guid: 602da53881462d34b8fa2f403ade302a, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -198,6 +206,10 @@ PrefabInstance:
     - target: {fileID: 4251943564877495982, guid: 602da53881462d34b8fa2f403ade302a, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251943564877495983, guid: 602da53881462d34b8fa2f403ade302a, type: 3}
+      propertyPath: m_Name
+      value: PlayerPrefab Lobby
       objectReference: {fileID: 0}
     - target: {fileID: 4251943564877495983, guid: 602da53881462d34b8fa2f403ade302a, type: 3}
       propertyPath: m_IsActive
@@ -285,6 +297,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5317570144416805278, guid: 602da53881462d34b8fa2f403ade302a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520510532400816677, guid: 602da53881462d34b8fa2f403ade302a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482042498096542500, guid: 602da53881462d34b8fa2f403ade302a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7443929188301261574, guid: 602da53881462d34b8fa2f403ade302a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7718438909199238414, guid: 602da53881462d34b8fa2f403ade302a, type: 3}
